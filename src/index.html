@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      ((pathname) => {
+        if (pathname !== '/') {
+          document.documentElement.style.display = 'none';
+          location.href = `https://ekblog.de${pathname}`;
+        }
+      })(location.pathname);
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../static/favicon.ico" />
     <link rel="stylesheet" href="{{normalizeCSSFile}}" />
     <link href="src/main.css" module />
     <title>EK</title>
-</head>
-<body>
-  <main classname="main-content">
-    <footer classname="main-footer">
-      &copy; {{year}} &middot; Emanuel Kluge
-    </footer>
-  </main>
-</body>
+  </head>
+  <body>
+    <main classname="main-content">
+      <footer classname="main-footer">
+        &copy; {{year}} &middot; Emanuel Kluge
+      </footer>
+    </main>
+  </body>
 </html>
