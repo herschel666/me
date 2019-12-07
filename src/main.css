@@ -1,0 +1,44 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  height: 100vh;
+  color: #fff;
+  background: #001e2b url(../static/background.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+@media (min-resolution: 144dpi) {
+  body {
+    background-image: url(../static/background@2.jpg);
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    background-image: url(../static/background-portrait.jpg);
+  }
+}
+
+@media (min-resolution: 144dpi) and (orientation: portrait) {
+  body {
+    background-image: url(../static/background-portrait@2.jpg);
+  }
+}
+
+.main-content {
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+}
+
+.main-footer {
+  width: 100%;
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 0.5rem;
+  letter-spacing: 0.05rem;
+  word-spacing: 0.25rem;
+  text-shadow: 0 1px 0px #000, 0 1px 1px #000, 0 0 3px #000;
+}
