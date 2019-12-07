@@ -1,7 +1,7 @@
 {
   "name": "me",
   "version": "0.1.0",
-  "priate": true,
+  "private": true,
   "main": "src/index.html",
   "scripts": {
     "foo": "env",
