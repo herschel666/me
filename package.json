@@ -19,6 +19,6 @@
     "parcel-bundler": "1.12.4",
     "posthtml-expressions": "1.1.1",
     "posthtml-postcss-modules": "0.1.7",
-    "prettier": "1.19.1"
+    "prettier": "2.0.5"
   }
 }
