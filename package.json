@@ -14,7 +14,7 @@
   "author": "Emanuel Kluge (https://emanuel-kluge.de/)",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "9.8.1",
+    "autoprefixer": "9.8.2",
     "modern-normalize": "0.6.0",
     "parcel-bundler": "1.12.4",
     "posthtml-expressions": "1.4.2",
