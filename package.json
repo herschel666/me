@@ -4,7 +4,6 @@
   "private": true,
   "main": "src/index.html",
   "scripts": {
-    "foo": "env",
     "start": "parcel --no-source-maps --no-cache -p 3000 $npm_package_main",
     "build": "parcel build $npm_package_main",
     "prebuild": "rm -rf ./dist",
