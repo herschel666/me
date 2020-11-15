@@ -1,0 +1,53 @@
+name: Build and Test and Deploy
+
+on:
+  push:
+    branches:
+      - KillYourMaster
+  pull_request:
+
+jobs:
+  ci-cd:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Cache Node dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Cache Build artifacts
+        uses: actions/cache@v2
+        with:
+          path: ./.cache
+          key: ${{ runner.os }}-node-${{ hashFiles('**/*') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Build & test the application
+        run: |
+          npm ci
+          npm test
+          npm run build
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.1
+        with:
+          publish-dir: './dist'
+          production-branch: KillYourMaster
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: 'Deploy from herschel666/me'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1
