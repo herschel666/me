@@ -40,8 +40,74 @@ body {
 
 .main-content {
   display: flex;
-  height: 100%;
+  min-height: 100vh;
   align-items: flex-end;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.links {
+  width: 100%;
+  margin: auto;
+  display: flex;
+}
+
+.box {
+  margin: 2rem;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+.box__title {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+}
+
+.box__icon {
+  margin: 1rem auto;
+  width: 7rem;
+}
+
+.box__title,
+.box__icon {
+  filter: drop-shadow(0 3px 0.5px #000);
+}
+
+.box:hover .box__title,
+.box:focus .box__title {
+  color: #000;
+  filter: drop-shadow(0 -1px 0.5px #fff);
+  transform: translate3d(0, 2px, 0);
+}
+
+.box:hover .box__icon,
+.box:focus .box__icon {
+  color: #333;
+  filter: drop-shadow(0 -4px 0.5px #eee);
+  transform: translate3d(0, 4px, 0);
+}
+
+@media (orientation: landscape) {
+  .links {
+    flex-direction: row;
+  }
+
+  .box {
+    width: 30%;
+  }
+}
+
+@media (orientation: portrait) {
+  .links {
+    flex-direction: column;
+  }
+
+  .box {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .main-footer {

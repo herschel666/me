@@ -14,36 +14,66 @@
     <link rel="icon" type="image/x-icon" href="../static/favicon.ico" />
     <link rel="stylesheet" href="{{normalizeCSSFile}}" />
     <link href="src/main.css" module />
+    <meta name="generator" content="FrontPage 4.0" />
+    <meta name="theme-color" content="#82b8db" />
     <title>EK</title>
   </head>
   <body>
     <main classname="main-content">
+      <div classname="links">
+        <a
+          classname="box"
+          href="https://github.com/herschel666"
+          rel="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2 classname="box__title">Github</h2>
+          <div classname="box__icon">
+            <icon filename="github.svg" />
+          </div>
+        </a>
+        <a
+          classname="box"
+          href="https://twitter.com/herschel_r"
+          rel="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2 classname="box__title">twitter</h2>
+          <div classname="box__icon">
+            <icon filename="twitter.svg" />
+          </div>
+        </a>
+        <a
+          classname="box"
+          href="https://photos.klg.bz/"
+          rel="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2 classname="box__title">Photography</h2>
+          <div classname="box__icon">
+            <icon filename="camera.svg" />
+          </div>
+        </a>
+      </div>
       <footer classname="main-footer">
         &copy; {{year}} &middot; Emanuel Kluge
       </footer>
     </main>
     <script>
-      ((pixel, trackingId, hostname, pathname, search, referrer) => {
+      ((pixel, trackingId, hostname) => {
         if (hostname !== 'emanuel-kluge.de') {
           return;
         }
-        const src =
-          pixel +
-          '?' +
-          'id=' +
-          trackingId +
-          '&resource=' +
-          encodeURIComponent(pathname + search) +
-          '&referrer=' +
-          encodeURIComponent(referrer);
+        const pathname = encodeURIComponent(location.pathname);
+        const search = encodeURIComponent(location.search);
+        const referrer = encodeURIComponent(document.referrer);
+        const resource = `${pathname}${search}`;
+        const src = `${pixel}?id=${trackingId}&resource=${resource}&referrer=${referrer}`;
         Object.assign(new Image(), { src });
       })(
         'https://analytics.e5l.de/cctv.gif',
-        'c36837aaaa3b7a2a984fb2f122bb286161a2fe47c947ab7a3b45bccff8ab3d9e_58815a7bdabfcadf4971778325a06409',
-        location.hostname,
-        location.pathname,
-        location.search,
-        document.referrer
+        '{{trackingId}}',
+        location.hostname
       );
     </script>
   </body>
