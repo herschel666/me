@@ -26,7 +26,10 @@
       </footer>
     </main>
     <script>
-      ((pixel, trackingId, pathname, search, referrer) => {
+      ((pixel, trackingId, hostname, pathname, search, referrer) => {
+        if (hostname !== 'emanuel-kluge.de') {
+          return;
+        }
         const src =
           pixel +
           '?' +
@@ -40,6 +43,7 @@
       })(
         'https://analytics.e5l.de/cctv.gif',
         'c36837aaaa3b7a2a984fb2f122bb286161a2fe47c947ab7a3b45bccff8ab3d9e_58815a7bdabfcadf4971778325a06409',
+        location.hostname,
         location.pathname,
         location.search,
         document.referrer
