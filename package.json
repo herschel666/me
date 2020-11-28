@@ -20,6 +20,6 @@
     "posthtml-expressions": "1.7.0",
     "posthtml-inline-svg": "0.2.0",
     "posthtml-postcss-modules": "0.1.7",
-    "prettier": "2.2.0"
+    "prettier": "2.2.1"
   }
 }
