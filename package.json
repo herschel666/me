@@ -19,7 +19,6 @@
     "postcss": "8.2.4",
     "posthtml-expressions": "1.7.1",
     "posthtml-inline-svg": "0.2.0",
-    "posthtml-postcss-modules": "0.1.7",
     "prettier": "2.2.1"
   }
 }
