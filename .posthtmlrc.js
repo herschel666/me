@@ -4,9 +4,6 @@ const SRC = path.join(__dirname, 'src');
 
 const isProd = process.env.NODE_ENV === 'production';
 
-const generateScopedName = isProd
-  ? '[hash:base64:5]'
-  : '[name]__[local]___[hash:base64:5]';
 const normalizeCSSFile = isProd
   ? 'https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css '
   : `../${path.relative(__dirname, require.resolve('modern-normalize'))}`;
@@ -25,12 +22,6 @@ module.exports = {
     'posthtml-inline-svg': {
       cwd: path.join(SRC, 'icons'),
       attr: 'filename',
-    },
-    'posthtml-postcss-modules': {
-      root: __dirname,
-      from: SRC,
-      plugins: [require('autoprefixer')],
-      generateScopedName,
     },
   },
 };
