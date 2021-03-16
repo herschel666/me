@@ -15,7 +15,7 @@
   "devDependencies": {
     "autoprefixer": "9.8.6",
     "modern-normalize": "1.0.0",
-    "parcel-bundler": "1.12.4",
+    "parcel-bundler": "1.12.5",
     "postcss": "8.2.8",
     "posthtml-expressions": "1.7.1",
     "posthtml-inline-svg": "0.2.0",
