@@ -19,7 +19,7 @@ jobs:
           node-version: '14.x'
 
       - name: Cache Node dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -27,7 +27,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Cache Build artifacts
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ./.cache
           key: ${{ runner.os }}-node-${{ hashFiles('**/*') }}
