@@ -118,15 +118,6 @@ body {
   letter-spacing: 0.05rem;
   word-spacing: 0.25rem;
   line-height: 1.75;
-<<<<<<< HEAD
   text-shadow: 0 1px 0px #000, 0 1px 1px #000, 0 0 3px #000;
-||||||| parent of 84d3b31... chore: update parcel
-  text-shadow: 0 1px 0px #000, 0 1px 1px #000, 0 0 3px #000;
-}
-
-.no-break {
-=======
-  text-shadow: 0 1px 0px #342912, 0 1px 1px #342912, 0 0 3px #342912;
->>>>>>> 84d3b31... chore: update parcel
   white-space: nowrap;
 }
