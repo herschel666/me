@@ -2,23 +2,18 @@
   "name": "me",
   "version": "0.1.0",
   "private": true,
-  "main": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel --no-source-maps --no-cache -p 3000 $npm_package_main",
-    "build": "parcel build $npm_package_main",
+    "start": "parcel --no-cache -p 3000 src/index.html",
+    "build": "parcel build --no-source-maps src/index.html",
     "prebuild": "rm -rf ./dist",
     "postbuild": "cp _* dist"
   },
-  "keywords": [],
   "author": "Emanuel Kluge (https://emanuel-kluge.de/)",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "9.8.8",
-    "modern-normalize": "1.1.0",
-    "parcel-bundler": "1.12.5",
-    "postcss": "8.4.14",
+    "parcel": "2.5.0",
     "posthtml-expressions": "1.9.0",
-    "posthtml-inline-svg": "0.2.0",
     "prettier": "2.6.2"
   }
 }
