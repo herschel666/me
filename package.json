@@ -12,7 +12,7 @@
   "author": "Emanuel Kluge (https://emanuel-kluge.de/)",
   "license": "MIT",
   "devDependencies": {
-    "parcel": "2.10.0",
+    "parcel": "2.10.1",
     "posthtml-expressions": "1.11.2",
     "prettier": "3.0.3"
   }
