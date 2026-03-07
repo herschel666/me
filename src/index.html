@@ -70,22 +70,5 @@
         &copy; {{year}} &middot; Emanuel Kluge
       </footer>
     </main>
-    <script>
-      ((pixel, trackingId, hostname) => {
-        if (hostname !== 'emanuel-kluge.de') {
-          return;
-        }
-        const pathname = encodeURIComponent(location.pathname);
-        const search = encodeURIComponent(location.search);
-        const referrer = encodeURIComponent(document.referrer);
-        const resource = `${pathname}${search}`;
-        const src = `${pixel}?id=${trackingId}&resource=${resource}&referrer=${referrer}`;
-        Object.assign(new Image(), { src });
-      })(
-        'https://analytics.e5l.de/cctv.gif',
-        'c36837aaaa3b7a2a984fb2f122bb286161a2fe47c947ab7a3b45bccff8ab3d9e_58815a7bdabfcadf4971778325a06409',
-        location.hostname
-      );
-    </script>
   </body>
 </html>
